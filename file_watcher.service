@@ -1,0 +1,12 @@
+[Unit]
+Description=File Watcher Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/ubuntu/bsm/file_watcher.py
+Restart=always
+User=yigit
+Group=yigit
+
+[Install]
+WantedBy=multi-user.target
